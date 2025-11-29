@@ -5,8 +5,7 @@ body {
   background-color: #eae2b7;
   color: #003049;
   font-family: "Source Sans Pro", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 40px;
-}
+  
 
 /* Headings */
 h1, 
@@ -14,6 +13,12 @@ h2,
 h3 {
   font-family: "Playfair Display", Times, serif;
   text-align: center;
+}
+header h1 {
+  font-size: 37px;
+}
+header nav a {
+    font-size: 18px;
 }
 
 h2 {
@@ -30,6 +35,10 @@ header {
   gap: 40px;
   padding: 1px;
   text-align: center;
+}
+nav {
+    display: flex; /* Activate flexbox layout */
+    gap: 20px;     /* Adds 20px of space between all direct children (the <a> tags) */
 }
 
 
@@ -61,12 +70,10 @@ p {
 }
 
 /* Unordered Lists */
-ul {
-  margin: 8px 0;
-}
 
+/* list items */
 li {
-  margin: 8px 0;
+  line-height: 1.1; /* A unitless value is recommended as it scales with font size */
 }
 
 /* Links */
@@ -94,6 +101,7 @@ a:link {
   min-width: 200px;
   margin-top: 40px;
 }
+}
 
 .about-text-container {
   flex: 1;
@@ -108,7 +116,7 @@ a:link {
 }
 
 .about-text-container p {
-  /* much smaller margin between paragraphs inside the about block */
+  /* much smaller margin between paragraphs inside the about block*/
   margin: 3px 0;
 }
 
@@ -148,3 +156,33 @@ footer {
 hr {
   border: 1px solid black;
 }
+.portfolio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: top;
+  width: 100%;
+  padding: 10px;
+  gap: 10px;
+}
+.portfolio-container h3 {
+  font-size: 20px
+}
+.portfolio-container p {
+  font-size: 14px;
+  padding: 0 6px;
+}
+.portfolio-abstract-red-container,
+.portfolio-spiral-zany-container, 
+.portfolio-melted-rainbow-container {
+margin-top: 0px;
+max-width: 100%; /* Ensures the image doesn't overflow the container */
+  height: auto;    /* Maintains the image's aspect ratio */
+  object-fit: contain; /* Scales the image to fit the container without cropping */
+}
+
+
+ 
+
+
+
